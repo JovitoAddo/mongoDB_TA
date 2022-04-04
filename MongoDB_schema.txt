@@ -1,0 +1,78 @@
+SOAL 01.
+
+relasi yang di butuhkan one to one, karena 1 data hanya untuk 1 user
+
+const skiljek = [
+	{
+    "_id": "ObjectId('AAA')",
+    "fullName": "John Doe",
+    "email": "johndoe@email.com",
+    "phone": "081874308544"
+	}
+];
+
+
+SOAL 02.
+
+relasi yang di butuhkan one to many, karena 1 user bisa memiliki banyak alamat
+
+const skilShop= [
+	{
+   	 "_id": "ObjectId('AAA')",
+  	 "fullName": "John Doe",
+  	 "phone": "081874308544",
+  	 "address": {
+		alamat1: "jl. kaki, 08, jakarta",
+		alamat2: "jl. jalan, 09, jakarta"
+	}
+];
+
+
+SOAL 03.
+
+relasi yang di butuhkan one to many, karena 1 user bisa memilih banyak varian
+
+const varian = [
+	{
+   	"_id" : "ObjectId('AAA')",
+  	"namaVarian" : "Kaos Polos Hitam",
+   	"color" : "Hitam",
+   	"qty" : "12",
+    	"price" : "99000"
+    },
+    {
+	"_id" : "ObjectId('BBB')",
+	"namaVarian" : "Kaos Polos Navy",
+	"color" : "Navy",
+	"qty" : "10",
+ 	"price" : "99000"
+]
+
+const product = {
+	"_id" : "ObjectId('111')",
+	"productName" : "Kaos Polos",
+	"brandName" : "SkilShirt",
+	"varian : [ObjectId('BBB'),ObjectId('AAA')]
+	}
+
+SOAL 04
+
+relasi yang di butuhkan adalah many to many, karena banyak data film bisa ada di banyak cinema
+const movie = [{
+	"_id" : "ObjectId('111')",
+	"name": "Venom 2"
+	},{
+	"_id" : "ObjectId('222')",
+	"name": "Spiderman No Way Home"
+	}
+
+const cinema = [{
+	"_id" : "ObjectId('AAA')",
+	"name": "CGF",
+	"movie": [ObjectId('111'),ObjectId('222')]
+	},{
+	"_id" : "ObjectId('BBB')",
+	"name": "Cinema31",
+	"movie": [ObjectId('111'),ObjectId('222')]
+	]
+
